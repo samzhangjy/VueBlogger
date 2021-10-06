@@ -1,0 +1,135 @@
+@font-face
+{
+  font-family: Poppins;
+  src: url("../fonts/Poppins/Poppins-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body, html {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+}
+
+.content {
+  min-height: 100%;
+  position: relative;
+}
+
+* {
+  font-family: Poppins;
+}
+
+.container {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+a {
+  color: #1A5CFF;
+  text-decoration: none;
+  transition: 0.5s ease-in-out;
+}
+
+hr {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #EEF2F5;
+  margin-bottom: 10px;
+}
+
+code {
+  font-size: 90%;
+  background-color: #FAFAFA;
+  padding: 0px 5px 0px 5px;
+  border-radius: 3px !important;
+}
+
+[vs-theme=dark] code {
+  font-size: 90%;
+  background-color: #141417 !important;
+  color: #ABB2BF;
+  padding: 0px 5px 0px 5px;
+  border-radius: 3px;
+}
+
+pre {
+  padding: 15px;
+  background-color: #FAFAFA !important;
+  border-radius: 45px 15px 45px 15px !important;
+}
+
+[vs-theme=dark] pre {
+  padding: 15px;
+  background-color: #141417 !important;
+  border-radius: 55px 15px 55px 15px !important;
+}
+
+.navbar-link {
+  color: #000;
+}
+
+[vs-theme=dark] .navbar-link {
+  color: #fff;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.tags-btn {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 0px 0px 0px;
+}
+
+[vs-theme=dark] {
+  background-color: rgba(30, 32, 35, 1) !important;
+  color: rgba(255, 255, 255, 1) !important;
+}
+
+[vs-theme=dark] hr {
+  border-color: #141414;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.headline {
+  font-size: 250%;
+}
+
+.footer {
+  background-color: #EEF2F5;
+  height: 200px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer hr {
+  border-color: #fff;
+}
+
+[vs-theme=dark] .footer {
+  background-color: #141414;
+}
+
+
+[vs-theme=dark] .footer hr {
+  border-color: #000;
+}
+
+@media only screen and (min-width: 415px) {
+  .menu-btn {
+    display: none !important;
+  }
+}

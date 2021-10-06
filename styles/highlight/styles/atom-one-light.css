@@ -1,0 +1,96 @@
+/*
+
+Atom One Light by Daniel Gamage
+Original One Light Syntax theme from https://github.com/atom/one-light-syntax
+
+base:    #fafafa
+mono-1:  #383a42
+mono-2:  #686b77
+mono-3:  #a0a1a7
+hue-1:   #0184bb
+hue-2:   #4078f2
+hue-3:   #a626a4
+hue-4:   #50a14f
+hue-5:   #e45649
+hue-5-2: #c91243
+hue-6:   #986801
+hue-6-2: #c18401
+
+*/
+
+.post .hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #383a42;
+  background: #fafafa;
+}
+
+.post .hljs-comment,
+.post .hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.post .hljs-doctag,
+.post .hljs-keyword,
+.post .hljs-formula {
+  color: #a626a4;
+}
+
+.post .hljs-section,
+.post .hljs-name,
+.post .hljs-selector-tag,
+.post .hljs-deletion,
+.post .hljs-subst {
+  color: #e45649;
+}
+
+.post .hljs-literal {
+  color: #0184bb;
+}
+
+.post .hljs-string,
+.post .hljs-regexp,
+.post .hljs-addition,
+.post .hljs-attribute,
+.post .hljs-meta-string {
+  color: #50a14f;
+}
+
+.post .hljs-built_in,
+.post .hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.post .hljs-attr,
+.post .hljs-variable,
+.post .hljs-template-variable,
+.post .hljs-type,
+.post .hljs-selector-class,
+.post .hljs-selector-attr,
+.post .hljs-selector-pseudo,
+.post .hljs-number {
+  color: #986801;
+}
+
+.post .hljs-symbol,
+.post .hljs-bullet,
+.post .hljs-link,
+.post .hljs-meta,
+.post .hljs-selector-id,
+.post .hljs-title {
+  color: #4078f2;
+}
+
+.post .hljs-emphasis {
+  font-style: italic;
+}
+
+.post .hljs-strong {
+  font-weight: bold;
+}
+
+.post .hljs-link {
+  text-decoration: underline;
+}

@@ -90,7 +90,6 @@ export default {
   },
   methods: {
     initialize: function () {
-      console.log(this.active)
       const cur = this.$route.path
       this.active = {
         name: null,

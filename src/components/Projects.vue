@@ -58,6 +58,9 @@ export default {
     return {
       projects: ProjectsJson.projects
     }
+  },
+  mounted: function () {
+    this.changeTitle('Projects')
   }
 }
 </script>

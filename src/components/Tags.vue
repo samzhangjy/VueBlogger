@@ -22,7 +22,7 @@
             </template>
             <template #text>
               <p>
-                {{ tag.posts.length }} posts
+                {{ tag.posts.length }} post{{ `${tag.posts.length !== 1 ? "s" : ""}` }}
               </p>
             </template>
           </vs-card>
@@ -34,6 +34,9 @@
 
 <script>
 export default {
-  name: 'Tags'
+  name: 'Tags',
+  mounted: function () {
+    this.changeTitle('Tags')
+  }
 }
 </script>

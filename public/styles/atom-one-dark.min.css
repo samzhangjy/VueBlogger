@@ -1,0 +1,21 @@
+/*
+
+Atom One Dark by Daniel Gamage
+Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
+
+base:    #282c34
+mono-1:  #abb2bf
+mono-2:  #818896
+mono-3:  #5c6370
+hue-1:   #56b6c2
+hue-2:   #61aeee
+hue-3:   #c678dd
+hue-4:   #98c379
+hue-5:   #e06c75
+hue-5-2: #be5046
+hue-6:   #d19a66
+hue-6-2: #e6c07b
+
+*/
+
+[vs-theme=dark] .hljs{display:block;overflow-x:auto;padding:.5em;color:#abb2bf;background:#282c34}[vs-theme=dark] .hljs-comment,[vs-theme=dark] .hljs-quote{color:#5c6370;font-style:italic}[vs-theme=dark] .hljs-doctag,[vs-theme=dark] .hljs-formula,[vs-theme=dark] .hljs-keyword{color:#c678dd}[vs-theme=dark] .hljs-deletion,[vs-theme=dark] .hljs-name,[vs-theme=dark] .hljs-section,[vs-theme=dark] .hljs-selector-tag,[vs-theme=dark] .hljs-subst{color:#e06c75}[vs-theme=dark] .hljs-literal{color:#56b6c2}[vs-theme=dark] .hljs-addition,[vs-theme=dark] .hljs-attribute,[vs-theme=dark] .hljs-meta-string,[vs-theme=dark] .hljs-regexp,[vs-theme=dark] .hljs-string{color:#98c379}[vs-theme=dark] .hljs-built_in,[vs-theme=dark] .hljs-class .hljs-title{color:#e6c07b}[vs-theme=dark] .hljs-attr,[vs-theme=dark] .hljs-number,[vs-theme=dark] .hljs-selector-attr,[vs-theme=dark] .hljs-selector-class,[vs-theme=dark] .hljs-selector-pseudo,[vs-theme=dark] .hljs-template-variable,[vs-theme=dark] .hljs-type,[vs-theme=dark] .hljs-variable{color:#d19a66}[vs-theme=dark] .hljs-bullet,[vs-theme=dark] .hljs-link,[vs-theme=dark] .hljs-meta,[vs-theme=dark] .hljs-selector-id,[vs-theme=dark] .hljs-symbol,[vs-theme=dark] .hljs-title{color:#61aeee}[vs-theme=dark] .hljs-emphasis{font-style:italic}[vs-theme=dark] .hljs-strong{font-weight:700}[vs-theme=dark] .hljs-link{text-decoration:underline}

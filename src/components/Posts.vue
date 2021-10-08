@@ -6,7 +6,7 @@
     <vs-row id="row">
       <vs-col
         :key="index"
-        v-for="(post, index) in posts.reverse()"
+        v-for="(post, index) in allPosts.slice().reverse()"
         lg="4"
         sm="12"
         md="6"
@@ -20,8 +20,7 @@
 </template>
 
 <script>
-import Posts from '@/../posts/data/posts.json'
-import Config from '@/../posts/data/config.json'
+import AllPosts from '@/../posts/data/posts.json'
 import PostCard from '@/components/PostCard.vue'
 
 export default {
@@ -31,8 +30,7 @@ export default {
   },
   data: function () {
     return {
-      posts: Posts.posts,
-      config: Config.config
+      allPosts: AllPosts.posts
     }
   },
   mounted: function () {

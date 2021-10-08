@@ -84,7 +84,6 @@ export default {
             // Handle error
             console.log(err)
           }
-          // console.log(this.nextPost, this.prevPost)
           break
         }
       }

@@ -74,8 +74,16 @@ export default {
           url: '/'
         },
         {
+          name: 'Posts',
+          url: '/posts'
+        },
+        {
           name: 'Projects',
           url: '/projects'
+        },
+        {
+          name: 'Links',
+          url: '/links'
         },
         {
           name: 'Tags',

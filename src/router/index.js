@@ -7,6 +7,8 @@ import BlogEntries from '@/../posts/data/posts.json'
 import About from '../views/About.vue'
 import ViewTags from '../views/ViewTags.vue'
 import ViewProjects from '../views/ViewProjects.vue'
+import Links from '../views/Links.vue'
+import ViewPosts from '../views/ViewPosts.vue'
 
 const children = []
 
@@ -29,6 +31,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/posts',
+    name: 'ViewPosts',
+    component: ViewPosts
   },
   {
     path: '/posts',
@@ -55,6 +62,11 @@ const routes = [
     path: '/projects',
     name: 'ViewProjects',
     component: ViewProjects
+  },
+  {
+    path: '/links',
+    name: 'Links',
+    component: Links
   }
 ]
 

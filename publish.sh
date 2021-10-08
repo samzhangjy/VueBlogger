@@ -7,7 +7,7 @@ echo '
             
 For geeks who wanted to write their blog site in Vue               V0.0.1 Alpha
 ================================================================================'
-echo Enter Github repo link
+echo Please enter your GitHub pages repository push URL: 
 read repo_link
 
 if [[ -n $repo_link ]]
@@ -25,7 +25,7 @@ then
   git add .
   git commit -m "Update [TOOL]"
   echo "Pushing to GitHub..."
-  git remote add origin git@github.com:samzhangjy/samzhangjy.github.io.git
+  git remote add origin $repo_link
   git push origin master --force
   echo "Repository pushed to GitHub."
   cd ..
@@ -34,5 +34,5 @@ then
   echo "Build finished! Your website will be live in a few minutes. Enjoy!"
 
 else 
-  echo "! Repo link is required !"
+  echo "! Repo link required !"
 fi

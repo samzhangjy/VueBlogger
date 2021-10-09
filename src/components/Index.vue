@@ -9,7 +9,7 @@
         <h4 style="color: #666666">{{ config.username }}</h4>
         <p>{{ config.description }}</p>
       </div>
-      <h1>Latest Posts</h1>
+      <h2>Latest Posts</h2>
       <hr/>
       <br />
       <vs-row id="row">

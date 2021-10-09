@@ -9,7 +9,7 @@
       </p>
       <p v-else>
         &copy; {{ config.blogStartYear }} - {{ curYear }} {{ config.name }}.&nbsp;
-        Powered by VueBlogger.
+        Powered by <a href="https://github.com/samzhangjy/VueBlogger" target="_blank">VueBlogger</a>.
       </p>
     </div>
   </div>

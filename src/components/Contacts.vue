@@ -3,20 +3,16 @@
     <h2 class="text-center">
       Contact Me
     </h2>
-    <br />
-    <vs-row>
-      <vs-col
+    <div class="grid-3_xs-1_sm-2_md-2">
+      <div
         v-for="(contact, index) in contacts"
         :key="index"
-        lg="4"
-        sm="12"
-        md="6"
-        style="margin-bottom: 30px"
+        class="col"
       >
         <a :href="contact.link" target="_blank">
           <vs-card
             type="3"
-            style="max-width: 95%"
+            class="center"
           >
             <template #title>
               <h3>{{ contact.name }}</h3>
@@ -28,8 +24,8 @@
             </template>
           </vs-card>
         </a>
-      </vs-col>
-    </vs-row>
+      </div>
+    </div>
   </div>
 </template>
 

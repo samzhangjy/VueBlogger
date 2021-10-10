@@ -2,20 +2,16 @@
   <div class="container">
     <h1 class="text-center">Tags</h1>
     <hr />
-    <br />
-    <vs-row>
-      <vs-col
+    <div class="grid-3_xs-1_sm-2_md-2">
+      <div
         v-for="(tag, index) in tags"
         :key="index"
-        lg="4"
-        sm="12"
-        md="6"
-        style="margin-bottom: 30px"
+        class="col"
       >
         <router-link :to="`/tags/${tag.name}`">
           <vs-card
             type="3"
-            style="max-width: 95%"
+            class="center"
           >
             <template #title>
               <h3>{{ tag.name }}</h3>
@@ -27,8 +23,8 @@
             </template>
           </vs-card>
         </router-link>
-      </vs-col>
-    </vs-row>
+      </div>
+    </div>
   </div>
 </template>
 

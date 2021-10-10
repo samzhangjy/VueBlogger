@@ -9,6 +9,7 @@ import ViewTags from '../views/ViewTags.vue'
 import ViewProjects from '../views/ViewProjects.vue'
 import Links from '../views/Links.vue'
 import ViewPosts from '../views/ViewPosts.vue'
+import NotFound from '../views/errors/NotFound.vue'
 
 const children = []
 
@@ -67,6 +68,11 @@ const routes = [
     path: '/links',
     name: 'Links',
     component: Links
+  },
+  {
+    path: '*',
+    name: 'NotFound',
+    component: NotFound
   }
 ]
 

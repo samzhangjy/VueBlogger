@@ -4,14 +4,11 @@
     <hr />
     <ProjectDes class="text-center" />
     <br />
-    <vs-row>
-      <vs-col
+    <div class="grid-3_xs-1_sm-2_md-2">
+      <div
         v-for="(project, index) in projects"
         :key="index"
-        lg="4"
-        sm="12"
-        md="6"
-        style="margin-bottom: 30px"
+        class="col center"
       >
         <a :href="project.link" target="_blank">
           <vs-card
@@ -40,8 +37,8 @@
             </template>
           </vs-card>
         </a>
-      </vs-col>
-    </vs-row>
+      </div>
+    </div>
   </div>
 </template>
 

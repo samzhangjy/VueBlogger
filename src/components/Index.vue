@@ -11,20 +11,15 @@
       </div>
       <h2>Latest Posts</h2>
       <hr/>
-      <br />
-      <vs-row id="row">
-        <vs-col
+      <div class="grid-3_xs-1_sm-2_md-2">
+        <div
           :key="index"
           v-for="(post, index) in posts.slice(Math.max(posts.length - 6, 0)).reverse()"
-          lg="4"
-          sm="12"
-          md="6"
-          style="margin-bottom: 30px"
-          id="row"
+          class="col"
         >
-          <PostCard :post="post" id="col" />
-        </vs-col>
-      </vs-row>
+          <PostCard :post="post" class="center" />
+        </div>
+      </div>
     </div>
   </div>
 </template>

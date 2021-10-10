@@ -3,19 +3,15 @@
     <h1 class="text-center">Posts</h1>
     <hr />
     <br />
-    <vs-row id="row">
-      <vs-col
+    <div class="grid-3_xs-1_sm-2_md-2">
+      <div
         :key="index"
         v-for="(post, index) in allPosts[curPage - 1].slice().reverse()"
-        lg="4"
-        sm="12"
-        md="6"
-        style="margin-bottom: 30px"
-        id="row"
+        class="col center"
       >
-        <PostCard :post="post" id="col" />
-      </vs-col>
-    </vs-row>
+        <PostCard :post="post" />
+      </div>
+    </div>
     <div class="center con-pagination">
     <vs-pagination v-model="curPage" :length="allPosts.length" not-margin progress />
     </div>

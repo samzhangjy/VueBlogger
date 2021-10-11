@@ -98,7 +98,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .cover {
   width: 100vw;
 }
@@ -107,7 +107,7 @@ export default {
   margin-left: 20px;
 }
 
-img {
+.post img {  /* limit image max width to 100vw in a post */
   max-width: 100%;
 }
 </style>

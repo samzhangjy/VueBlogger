@@ -21,3 +21,13 @@ export default {
   }
 }
 </script>
+
+<style>
+.w-full {
+  width: 100% !important;
+}
+
+.w-full .vs-card__text {
+  width: 100%;
+}
+</style>

@@ -6,7 +6,7 @@
       <div
         :key="index"
         v-for="(link, index) in links"
-        class="col"
+        class="col w-full"
       >
         <ExchangeLink
           :link="link.link"

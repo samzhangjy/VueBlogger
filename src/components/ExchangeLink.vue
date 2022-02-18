@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <a :href="link" target="_blank">
-      <vs-card type="3">
+  <div class="w-full">
+    <a :href="link" target="_blank" class="w-full">
+      <vs-card type="3" class="w-full">
         <template #title>
           <h3>{{ title }}</h3>
         </template>

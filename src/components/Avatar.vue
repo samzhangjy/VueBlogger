@@ -9,13 +9,11 @@
 </template>
 
 <script>
-import Config from '@/../posts/data/config.json'
-
 export default {
   name: 'Avatar',
   data: function () {
     return {
-      config: Config.config
+      config: this.getConfig().config
     }
   },
   props: [

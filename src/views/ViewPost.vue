@@ -23,9 +23,7 @@
 </template>
 
 <script>
-import Posts from '@/../posts/data/posts.json'
 import Avatar from '@/components/Avatar.vue'
-import Config from '@/../posts/data/config.json'
 import PostNavBtn from '@/components/PostNavBtn.vue'
 import PostTags from '@/components/PostTags.vue'
 
@@ -39,7 +37,7 @@ export default {
   data: function () {
     return {
       postId: this.$route.path.split('posts/')[1],
-      posts: Posts.posts,
+      posts: this.getConfig('posts.json').posts,
       post: {
         title: null,
         date: [
@@ -49,7 +47,7 @@ export default {
         ],
         tags: []
       },
-      config: Config.config,
+      config: this.getConfig().config,
       prevPost: {
         title: null,
         id: null

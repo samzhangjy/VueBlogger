@@ -5,7 +5,7 @@ echo '
  |___/\_,_/\__/____/_/\___/\_, /\_, /\__/_/   
                           /___//___/     
             
-For geeks who wanted to write their blog site in Vue               V0.0.1 Alpha
+For geeks who wanted to write their blog site in Vue                      V0.1.0
 ================================================================================'
 echo Please enter your GitHub pages repository push URL: 
 read repo_link

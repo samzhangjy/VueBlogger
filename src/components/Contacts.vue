@@ -3,7 +3,7 @@
     <h2 class="text-center">
       Contact Me
     </h2>
-    <div class="grid-3_xs-1_sm-2_md-2">
+    <div class="grid-3_xs-1_sm-2_md-2" v-if="contacts.length">
       <div
         v-for="(contact, index) in contacts"
         :key="index"
@@ -26,18 +26,22 @@
         </a>
       </div>
     </div>
+    <Nothing />
   </div>
 </template>
 
 <script>
-import Contacts from '@/../posts/data/config.json'
+import Nothing from '@/components/Nothing.vue'
 
 export default {
   name: 'Contacts',
-  data: function () {
-    return {
-      contacts: Contacts.contacts
+  computed: {
+    contacts: function () {
+      return this.getConfig().contacts
     }
+  },
+  components: {
+    Nothing
   }
 }
 </script>

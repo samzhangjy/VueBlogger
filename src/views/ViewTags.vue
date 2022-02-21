@@ -2,7 +2,7 @@
   <div class="container">
     <h1 class="text-center">Tags</h1>
     <hr />
-    <div class="grid-3_xs-1_sm-2_md-2">
+    <div class="grid-3_xs-1_sm-2_md-2" v-if="tags.length">
       <div
         v-for="(tag, index) in tags"
         :key="index"
@@ -25,14 +25,20 @@
         </router-link>
       </div>
     </div>
+    <Nothing v-else />
   </div>
 </template>
 
 <script>
+import Nothing from '@/components/Nothing.vue'
+
 export default {
   name: 'ViewTags',
   mounted: function () {
     this.changeTitle('Tags')
+  },
+  components: {
+    Nothing
   }
 }
 </script>

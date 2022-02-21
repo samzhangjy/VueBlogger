@@ -30,7 +30,6 @@
 </template>
 
 <script>
-import Config from '@/../posts/data/config.json'
 import Avatar from '@/components/Avatar.vue'
 
 export default {
@@ -40,7 +39,7 @@ export default {
   ],
   data: function () {
     return {
-      config: Config.config
+      config: this.getConfig().config
     }
   },
   components: {

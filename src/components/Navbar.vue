@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vs-navbar shadow-scroll fixed center-collapsed v-model="active" not-line>
+    <vs-navbar shadow-scroll fixed center-collapsed not-line>
       <template #left>
         <vs-button flat icon style="margin-right: 20px" class="menu-btn" @click="activeSidebar = !activeSidebar">
           <i class='bx bx-menu'></i>
@@ -13,8 +13,7 @@
         v-for="(link, index) in links"
         :key="index"
         :active="active.name === link.name"
-        :to="link.url"
-        @click="active = link"
+        :to="active.name === link.name ? null : link.url"
       >
         {{ link.name }}
       </vs-navbar-item>
@@ -54,19 +53,20 @@
 </template>
 
 <script>
-import Config from '@/../posts/data/config.json'
+let Config = null
+try {
+  Config = require('@/../posts/data/config.json')
+} catch (e) {
+  Config = require('@/defaults/config.json')
+}
 
 export default {
   name: 'Navbar',
   data: () => {
     return {
-      active: {
-        name: 'Home',
-        url: '/'
-      },
+      config: Config.config,
       activeItem: 'Home',
       activeSidebar: false,
-      config: Config.config,
       dark: false,
       links: [
         {
@@ -97,16 +97,6 @@ export default {
     }
   },
   methods: {
-    initialize: function () {
-      const cur = this.$route.path
-      this.active = {
-        name: null,
-        url: null
-      }
-      for (var i = 0; i < this.links.length; i++) {
-        if (this.links[i].url === cur) this.active = this.links[i]
-      }
-    },
     changeTheme: function () {
       if (this.dark) {
         document.getElementsByTagName('body')[0].setAttribute('vs-theme', 'light')
@@ -115,22 +105,19 @@ export default {
         document.getElementsByTagName('body')[0].setAttribute('vs-theme', 'dark')
         this.dark = true
       }
-      this.initialize()
     }
   },
-  created: function () {
-    this.initialize()
-  },
-  watch: {
-    $route (to, from) {
+  computed: {
+    active: function () {
       const cur = this.$route.path
-      this.active = {
+      var ret = {
         name: null,
         url: null
       }
       for (var i = 0; i < this.links.length; i++) {
-        if (this.links[i].url === cur) this.active = this.links[i]
+        if (this.links[i].url === cur) ret = this.links[i]
       }
+      return ret
     }
   }
 }

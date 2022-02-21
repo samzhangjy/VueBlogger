@@ -9,7 +9,12 @@
 </template>
 
 <script>
-import About from '@/../posts/data/about.md'
+let About = null
+try {
+  About = require('@/../posts/data/about.md')
+} catch (e) {
+  About = require('@/defaults/about.md')
+}
 
 export default {
   name: 'AboutMe',

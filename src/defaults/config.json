@@ -1,0 +1,13 @@
+{
+    "config": {
+        "username": "A Programmer in the Wild",
+        "avatarPath": "https://avatars.dicebear.com/api/miniavs/Johndoe.svg",
+        "description": "Labore voluptate ea elit nisi minim quis laborum.",
+        "name": "John Doe",
+        "blogTitle": "My Blog",
+        "blogStartYear": 2022,
+        "theme": "default",
+        "nothing": "There's nothing here, yet."
+    },
+    "contacts": []
+}

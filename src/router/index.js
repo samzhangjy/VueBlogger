@@ -3,7 +3,6 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import ViewPost from '../views/ViewPost.vue'
 import ViewTag from '../views/ViewTag.vue'
-import BlogEntries from '@/../posts/data/posts.json'
 import About from '../views/About.vue'
 import ViewTags from '../views/ViewTags.vue'
 import ViewProjects from '../views/ViewProjects.vue'
@@ -13,7 +12,14 @@ import NotFound from '../views/errors/NotFound.vue'
 
 const children = []
 
-BlogEntries.posts.map(post => {
+let Posts = null
+try {
+  Posts = require('@/../posts/data/posts.json')
+} catch (e) {
+  Posts = require('@/defaults/posts.json')
+}
+
+Posts.posts.map(post => {
   children.push({
     path: post.id,
     component: async function () {

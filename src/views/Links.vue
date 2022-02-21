@@ -2,7 +2,7 @@
   <div class="container">
     <h1 class="text-center">Links</h1>
     <hr />
-    <div class="grid-3_xs-1_sm-2_md-2">
+    <div class="grid-3_xs-1_sm-2_md-2" v-if="links.length">
       <div
         :key="index"
         v-for="(link, index) in links"
@@ -16,22 +16,24 @@
         />
       </div>
     </div>
+    <Nothing v-else />
   </div>
 </template>
 
 <script>
 import ExchangeLink from '@/components/ExchangeLink.vue'
-import Links from '../../posts/data/links.json'
+import Nothing from '@/components/Nothing.vue'
 
 export default {
   name: 'Links',
   data: function () {
     return {
-      links: Links.links
+      links: this.getConfig('links.json').links
     }
   },
   components: {
-    ExchangeLink
+    ExchangeLink,
+    Nothing
   }
 }
 </script>

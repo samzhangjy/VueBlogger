@@ -2,6 +2,7 @@
   <div class="container">
     <h1 class="text-center">Tag <code>{{ tagName }}</code></h1>
     <hr>
+    <br />
     <vs-row id="row">
       <vs-col
         :key="index"

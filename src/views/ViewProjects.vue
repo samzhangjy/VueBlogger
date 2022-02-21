@@ -4,7 +4,7 @@
     <hr />
     <ProjectDes class="text-center" />
     <br />
-    <div class="grid-3_xs-1_sm-2_md-2">
+    <div class="grid-3_xs-1_sm-2_md-2" v-if="projects.length">
       <div
         v-for="(project, index) in projects"
         :key="index"
@@ -39,21 +39,28 @@
         </a>
       </div>
     </div>
+    <Nothing v-else />
   </div>
 </template>
 
 <script>
-import ProjectDes from '@/../posts/data/project-des.md'
-import ProjectsJson from '@/../posts/data/projects.json'
+import Nothing from '@/components/Nothing.vue'
+let ProjectDes = null
+try {
+  ProjectDes = require('@/../posts/data/project-des.md')
+} catch (e) {
+  ProjectDes = require('@/defaults/project-des.md')
+}
 
 export default {
   name: 'ViewProjects',
   components: {
-    ProjectDes: ProjectDes.vue.component
+    ProjectDes: ProjectDes.vue.component,
+    Nothing
   },
   data: function () {
     return {
-      projects: ProjectsJson.projects
+      projects: this.getConfig('projects.json').projects
     }
   },
   mounted: function () {

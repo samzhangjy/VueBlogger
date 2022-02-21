@@ -11,7 +11,7 @@
       </div>
       <h2>Latest Posts</h2>
       <hr/>
-      <div class="grid-3_xs-1_sm-2_md-2">
+      <div class="grid-3_xs-1_sm-2_md-2" v-if="posts.length">
         <div
           :key="index"
           v-for="(post, index) in posts.slice(Math.max(posts.length - 6, 0)).reverse()"
@@ -20,26 +20,27 @@
           <PostCard :post="post" class="center" />
         </div>
       </div>
+      <Nothing v-else />
     </div>
   </div>
 </template>
 
 <script>
-import Posts from '@/../posts/data/posts.json'
-import Config from '@/../posts/data/config.json'
 import Avatar from '@/components/Avatar.vue'
 import PostCard from '@/components/PostCard.vue'
+import Nothing from '@/components/Nothing.vue'
 
 export default {
   name: 'Home',
   components: {
     Avatar,
-    PostCard
+    PostCard,
+    Nothing
   },
   data: function () {
     return {
-      posts: Posts.posts,
-      config: Config.config
+      posts: this.getConfig('posts.json').posts,
+      config: this.getConfig().config
     }
   },
   mounted: function () {

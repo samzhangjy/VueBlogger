@@ -68,6 +68,12 @@ pre {
   border-radius: 55px 15px 55px 15px !important;
 }
 
+blockquote {
+  border-left: 3px solid #346bf5;
+  padding: 15px 30px 15px 30px;
+  margin: 0px;
+}
+
 .navbar-link {
   color: #000;
 }

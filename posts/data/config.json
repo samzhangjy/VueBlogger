@@ -1,0 +1,17 @@
+{
+    "config": {
+        "username": "蓝色的胖子",
+        "avatarPath": "http://5b0988e595225.cdn.sohucs.com/images/20200503/edc77d60f51e4f4bb6397dd5b20a0829.jpeg",
+        "description": "这是一个无聊的博主",
+        "name": "Javen",
+        "blogTitle": "你的博客标题",
+        "blogStartYear": 2023  // 博客开始日期，用于生成页脚的CopyRight
+    },
+    "contacts": [  // 联系方式
+        {
+            "name": "联系方式名称",
+            "value": "sunwenjie@hualaikeji.com",
+            "link": "联系方式链接，例如：mailto:xxx@example.com"
+        }
+    ]
+}
